@@ -23,11 +23,11 @@ const App = () => {
     
     <NavigationContainer>
     <Stack.Navigator initialRouteName="Home">
-      {/* <Stack.Screen
+      <Stack.Screen
       name="Home"
       component={HomeScreen}
       options={{headerShown: false}}
-      /> */}
+      />
       <Stack.Screen
         name="IngredientSelection"
         component={IngredientSelection}

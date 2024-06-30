@@ -9,24 +9,7 @@ import { DrawerActions } from '@react-navigation/native';
 const Stack = createStackNavigator();
 
 
-// useEffect(() => {
-//   // Load the Ionicons font asynchronously
-//   async function loadFonts() {
-//     await Font.loadAsync({
-//       Ionicons: require('@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.ttf'),
-//     });
-//   }
-//   loadFonts();
-// }, []);
 
-// // Use useFonts hook to check if the fonts are loaded
-// let [fontsLoaded] = useFonts({
-//   Ionicons: Ionicons.font,
-// });
-
-// if (!fontsLoaded) {
-//   return <Text>Loading...</Text>;
-// }
 
 
 const IngredientSelection = ({ navigation }) => {

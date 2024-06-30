@@ -8,19 +8,18 @@ const Recipe = ({ item }) => (
     <View style={styles.recipeContainer}>
       <Image source={item.image} style={styles.recipeImage} />
       <Text style={styles.recipeTitle}>{item.title}</Text>
-      {/* Additional details like ingredients and procedure can be added here */}
+      
     </View>
   );
 
   const RecipeScreen = () => {
-    const [numColumns, setNumColumns] = useState(2);
+    const [numColumns, setNumColumns] = useState();
     return (
       <FlatList
         data={recipes}
         renderItem={({ item }) => <Recipe item={item} />}
         keyExtractor={(item) => item.id}
-        numColumns ={numColumns}
-        key={numColumns}
+       
         contentContainerStyle ={ styles.listContainer}
       />
     );
@@ -38,11 +37,12 @@ const Recipe = ({ item }) => (
       alignItems: 'center',
     },
     recipeImage: {
-      
+      height: 300,
+      width: 400,
       borderRadius: 30,
       marginRight: 8,
       marginLeft:20,
-      aspectRatio: 5/6
+      
     },
     recipeTitle: {
       fontSize: 20,

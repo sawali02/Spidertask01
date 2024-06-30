@@ -4,15 +4,7 @@ import { recipes } from './recipesData';
 import * as Font from 'expo-font';
 import {Ionicons} from '@expo/vector-icons';
 import {Alert} from 'react-native';
-// import share from 'react-native-share';
 
-
-// const getFonts =() => {
-//   return Font.loadAsync({
-//     'Josefin-Sans': require('./assets/fonts/Josefin_Sans.zip'),
-//     'Open-Sans' : require('./assets/fonts/Open_Sans.zip')
-//   })
-// }
 
 const RecipeList = ({ route, navigation }) => {
   const { selectedIngredients } = route.params;
@@ -42,25 +34,7 @@ const RecipeList = ({ route, navigation }) => {
     Alert.alert('Notification' , 'added to favourites');
   };
 
-  // const handleSharePress = async () => {
-  //   const shareMessage = 'check out this amazing recipe!';
-  //   try{
-  //     await Sharing.shareAsync(shareMessage);
-  //   }
-  //   catch(error){
-  //     Alert('Sharing failed');
-  //   }
-  // };
-
-  // React.useLayoutEffect({} => {
-  //   Navigation.setOption({
-  //     hederRight: () => (
-  //       <TouchableOpacity style=(styles.favouriteButton) omPress={handleFavouritePress}>
-  //         <Icon name="heart" sixe={24} color="#000" />
-  //         </TouchableOpacity>
-  //     ),
-  //   });
-  //   }, [navigation]);
+  
 
   return (
     <View style={styles.container}>
@@ -80,9 +54,7 @@ const RecipeList = ({ route, navigation }) => {
         data={filteredRecipes}
         renderItem={renderRecipe}
         keyExtractor={(item) => item.id}
-        // horizontal
-        // pagingEnabled
-        // showsHorizontalScrollIndicator={false}
+        
       />
     </View>
   );
@@ -150,7 +122,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 6,
     color: '#000',
-    // fontFamily: 'Josefin-Sans'
+    
   },
   recipeProcedure: {
     fontSize: 18,
