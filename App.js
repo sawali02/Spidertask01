@@ -14,7 +14,7 @@ import RecipeScreen from './components/Recipes';
 import HomeScreen from './components/HomeScreen';
 
 
-const Drawer = createDrawerNavigator();
+
 const Stack = createStackNavigator();
 
 // const IngredientStack 
@@ -31,7 +31,7 @@ const App = () => {
       <Stack.Screen
         name="IngredientSelection"
         component={IngredientSelection}
-        options={{ headerShown: false }} // Hide header for IngredientSelection screen
+        options={{ headerShown: false }} 
       />
       <Stack.Screen
         name="RecipeList"
@@ -55,16 +55,7 @@ const App = () => {
   );
 };
 
-// const App = () => {
-//   return (
-//     <NavigationContainer>
-//       <Drawer.Navigator initialRouteName="IngredientSelection" drawerContent={(props) => <CustomDrawerContent{...props} />}>
-//         <Drawer.Screen name="Home" component={IngredientStack} />
-//         {/* Add more screens as needed */}
-//       </Drawer.Navigator>
-//     </NavigationContainer>
-//   );
-// };
+
 
 export default App;
 
